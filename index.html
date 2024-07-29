@@ -14,14 +14,14 @@
             background-color: black; /* Background color set to black */
         }
         .timer {
-            font-size: 2em;
+            font-size: 2em; /* Default font size */
             color: white; /* Text color set to white */
             font-family: '黑体', Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-    <div class="timer" id="timer"></div>
+    <div class="timer" id="timer" style="font-size: 3em;"></div> <!-- Adjust font size here -->
     <script>
         function startCountdown() {
             var now = new Date();
@@ -53,8 +53,8 @@
                 seconds = ("0" + seconds).slice(-2);
                 milliseconds = ("0" + milliseconds).slice(-2);
 
-                document.getElementById("timer").innerHTML = hours + "h " +
-                minutes + "m " + seconds + "s " + milliseconds + "ms";
+                document.getElementById("timer").innerHTML = hours + "時 " +
+                minutes + "分 " + seconds + "秒 " + milliseconds + "毫";
 
                 if (distance < 0) {
                     clearInterval(x);
